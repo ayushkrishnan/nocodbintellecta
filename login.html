@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Intellecta</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="">
+            <span>
+              Intellecta
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="event.html"> Event</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="chat.html"> Message </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="forum.html"> Forums </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Login </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+    <style>
+        header{
+            background-color: #fbd5ff;
+        }
+
+        body {
+            background-color: #fbd5ff;
+        }
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-control {
+            border-radius: 25px;
+            padding: 15px;
+            font-size: 16px;
+        }
+        .btn-login {
+            border-radius: 25px;
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-login:hover {
+            background-color: #0056b3;
+        }
+        .btn-google {
+            border-radius: 25px;
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #dd4b39;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-google:hover {
+            background-color: #c23321;
+        }
+        .text-center a {
+            color: #007bff;
+        }
+        .text-center a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn btn-login btn-block">Login</button>
+            <button type="button" class="btn btn-google btn-block" onclick="redirectToGoogle()">Login with Google</button>
+        </form>
+        <div class="text-center mt-3">
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div>
+
+    <script>
+        function redirectToGoogle() {
+            window.location.href = 'https://accounts.google.com/o/oauth2/auth?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=email%20profile&access_type=offline&approval_prompt=auto';
+            // Replace YOUR_CLIENT_ID and YOUR_REDIRECT_URI with your actual client ID and redirect URI
+        }
+    </script>
+</body>
+</html>
