@@ -15,7 +15,8 @@
   <title>Intellecta</title>
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -41,7 +42,8 @@
               Intellecta
             </span>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="s-1"> </span>
             <span class="s-2"> </span>
             <span class="s-3"> </span>
@@ -72,150 +74,164 @@
       </div>
     </header>
     <!-- end header section -->
-  </div> 
-    
-    <style>
-        /* Basic CSS styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #eae6f5;
-        }
-        .calendar {
-            width: 100%; /* Adjusted width to fit the screen */
-            border-collapse: collapse;
-        }
-        .calendar th, .calendar td {
-            border: 1px solid #000000;
-            padding: 40px; /* Adjust padding to make cells larger */
+  </div>
+
+  <style>
+    /* Basic CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #eae6f5;
+    }
+
+    .calendar {
+      width: 100%;
+      /* Adjusted width to fit the screen */
+      border-collapse: collapse;
+    }
+
+    .calendar th,
+    .calendar td {
+      border: 1px solid #000000;
+      padding: 40px;
+      /* Adjust padding to make cells larger */
+      text-align: center;
+      font-size: 20px;
+      /* Adjust font size to make text larger */
+    }
+
+    .calendar th {
+      background-color: #f2f2f2;
+    }
+
+    .today {
+      background-color: lightblue;
+    }
+
+    .selected {
+      background-color: lightgreen;
+    }
+
+    .monthNav {
+      font-size: 28px;
+      /* Adjusted font size for the month name */
+      text-align: center;
+      /* Center-align the month name */
+    }
+
+    #eventInput {
+      margin-top: 20px;
+    }
+
+    .header_section {
+      .container {
+        padding: 0;
+      }
+
+      .nav_container {
+        margin: 0 auto;
+      }
+    }
+
+    .custom_nav-container {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            padding: 7px 20px;
+            margin: 10px 15px;
+            color: black;
             text-align: center;
-            font-size: 20px; /* Adjust font size to make text larger */
-        }
-        .calendar th {
-            background-color: #f2f2f2;
-        }
-        .today {
-            background-color: lightblue;
-        }
-        .selected {
-            background-color: lightgreen;
-        }
-        .monthNav {
-            font-size: 28px; /* Adjusted font size for the month name */
-            text-align: center; /* Center-align the month name */
-        }
-        #eventInput {
-            margin-top: 20px;
-        }
-        .header_section {
-         .container {
-             padding: 0;
-                      }
+            border-radius: 35px;
+            text-transform: uppercase;
+            font-size: 15px;
+          }
 
-  .nav_container {
-    margin: 0 auto;
-     }
-    }
-
- .custom_nav-container {
-  .navbar-nav {
-    .nav-item {
-      .nav-link {
-        padding: 7px 20px;
-        margin: 10px 15px;
-        color: black;
-        text-align: center;
-        border-radius: 35px;
-        text-transform: uppercase;
-        font-size: 15px;
-      }
-
-      &.active,
-      &:hover {
-        .nav-link {
-          background-color: #000000;
-          color: white;
+          &.active,
+          &:hover {
+            .nav-link {
+              background-color: #000000;
+              color: white;
+            }
+          }
         }
       }
     }
-  }
-}
 
-a,
-a:hover,
-a:focus {
-  text-decoration: none;
-}
+    a,
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
 
-a:hover,
-a:focus {
-  color: initial;
-}
+    a:hover,
+    a:focus {
+      color: initial;
+    }
 
-.btn,
-.btn:focus {
-  outline: none !important;
-  box-shadow: none;
-}
+    .btn,
+    .btn:focus {
+      outline: none !important;
+      box-shadow: none;
+    }
 
-.custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
-  background-size: 22px;
-  background-repeat: no-repeat;
-  background-position-y: 7px;
-  width: 35px;
-  height: 35px;
-  padding: 0;
-  border: none;
-}
+    .custom_nav-container .nav_search-btn {
+      background-image: url(../images/search-icon.png);
+      background-size: 22px;
+      background-repeat: no-repeat;
+      background-position-y: 7px;
+      width: 35px;
+      height: 35px;
+      padding: 0;
+      border: none;
+    }
+  </style>
+  </head>
 
-    </style>
- </head>
- <body>
-<br>
-<div id="monthYear" class="monthNav">
-    <button onclick="previousMonth()">&#10094;</button>
-    <span id="monthName"></span>
-    <button onclick="nextMonth()">&#10095;</button>
-</div>
+  <body>
+    <br>
+    <div id="monthYear" class="monthNav">
+      <button onclick="previousMonth()">&#10094;</button>
+      <span id="monthName"></span>
+      <button onclick="nextMonth()">&#10095;</button>
+    </div>
 
-<table class="calendar">
-  <thead>
-    <tr><br>
-      <th>Sun</th>
-      <th>Mon</th>
-      <th>Tue</th>
-      <th>Wed</th>
-      <th>Thu</th>
-      <th>Fri</th>
-      <th>Sat</th>
-    </tr>
-  </thead>
-  <tbody id="calendarBody">
-    <!-- This section will be filled with calendar days dynamically -->
-  </tbody>
-</table>
+    <table class="calendar">
+      <thead>
+        <tr><br>
+          <th>Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </tr>
+      </thead>
+      <tbody id="calendarBody">
+        <!-- This section will be filled with calendar days dynamically -->
+      </tbody>
+    </table>
 
-<div id="eventDisplay">
-    <h2><br>Events for Selected Date</h2>
-    <ul id="eventList"></ul>
-</div>
+    <div id="eventDisplay">
+      <h2><br>Events for Selected Date</h2>
+      <ul id="eventList"></ul>
+    </div>
 
-<div id="eventInput">
-    <input type="text" id="newEvent" placeholder="Enter new event">
-    <button onclick="addNewEvent()">Add Event</button>
-    <button onclick="removeEvent()">Remove Event</button>
-</div>
+    <div id="eventInput">
+      <input type="text" id="newEvent" placeholder="Enter new event">
+      <button onclick="addNewEvent()">Add Event</button>
+      <button onclick="removeEvent()">Remove Event</button>
+    </div>
 
-<script>
-    const today = new Date();
-    let currentMonth = today.getMonth();
-    let currentYear = today.getFullYear();
-    let selectedDate = today.getDate();
-    let events = {};
+    <script>
+      const today = new Date();
+      let currentMonth = today.getMonth();
+      let currentYear = today.getFullYear();
+      let selectedDate = today.getDate();
+      let events = {};
 
-    function generateCalendar(month, year) {
+      function generateCalendar(month, year) {
         const firstDay = new Date(year, month, 1);
         const daysInMonth = new Date(year, month + 1, 0).getDate();
         const startingDay = firstDay.getDay();
@@ -225,124 +241,161 @@ a:focus {
 
         let date = 1;
         for (let i = 0; i < 6; i++) {
-            const row = document.createElement('tr');
+          const row = document.createElement('tr');
 
-            for (let j = 0; j < 7; j++) {
-                if (i === 0 && j < startingDay) {
-                    row.appendChild(document.createElement('td'));
-                } else if (date > daysInMonth) {
-                    break;
-                } else {
-                    const cell = document.createElement('td');
-                    cell.textContent = date;
-                    if (year === today.getFullYear() && month === today.getMonth() && date === today.getDate()) {
-                        cell.classList.add('today');
-                    }
-                    const key = `${year}-${padZero(month + 1)}-${padZero(date)}`;
-                    if (events[key] && events[key].length > 0) {
-                        cell.classList.add('has-events');
-                    }
-                    cell.addEventListener('click', function() {
-                        selectDate(date, month, year, cell);
-                    });
-                    row.appendChild(cell);
-                    date++;
-                }
+          for (let j = 0; j < 7; j++) {
+            if (i === 0 && j < startingDay) {
+              row.appendChild(document.createElement('td'));
+            } else if (date > daysInMonth) {
+              break;
+            } else {
+              const cell = document.createElement('td');
+              cell.textContent = date;
+              cell.setAttribute('data-date', new Date(year, month, date));
+              if (year === today.getFullYear() && month === today.getMonth() && date === today.getDate()) {
+                cell.classList.add('today');
+              }
+              const key = `${year}-${padZero(month + 1)}-${padZero(date)}`;
+              if (events[key] && events[key].length > 0) {
+                cell.classList.add('has-events');
+              }
+              cell.addEventListener('click', function (e) {
+                selectDate(cell);
+              });
+              row.appendChild(cell);
+              date++;
             }
-            tbody.appendChild(row);
+          }
+          tbody.appendChild(row);
         }
 
         document.getElementById('monthName').textContent = getMonthName(month) + ' ' + year;
-    }
+      }
 
-    function getMonthName(monthIndex) {
+      function getMonthName(monthIndex) {
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         return months[monthIndex];
-    }
+      }
 
-    function nextMonth() {
+      function nextMonth() {
         currentMonth++;
         if (currentMonth > 11) {
-            currentMonth = 0;
-            currentYear++;
+          currentMonth = 0;
+          currentYear++;
         }
         generateCalendar(currentMonth, currentYear);
-    }
+      }
 
-    function previousMonth() {
+      function previousMonth() {
         currentMonth--;
         if (currentMonth < 0) {
-            currentMonth = 11;
-            currentYear--;
+          currentMonth = 11;
+          currentYear--;
         }
         generateCalendar(currentMonth, currentYear);
-    }
+      }
 
-    function selectDate(date, month, year, cell) {
-        selectedDate = date;
+      function selectDate(cell) {
+        let selectedDate = cell.getAttribute('data-date');
 
         // Remove previous selection
         const selectedCell = document.querySelector('.selected');
         if (selectedCell) {
-            selectedCell.classList.remove('selected');
+          selectedCell.classList.remove('selected');
         }
 
         // Highlight selected date
         cell.classList.add('selected');
 
         // Display events for selected date
-        displayEventsForDate(selectedDate, currentMonth, currentYear);
-    }
+        displayEventsForDate(selectedDate);
+      }
 
-    function displayEventsForDate(date, month, year) {
-        const key = `${year}-${padZero(month + 1)}-${padZero(date)}`;
+      function displayEventsForDate(date) {
         const eventList = document.getElementById('eventList');
         eventList.innerHTML = '';
-
-        if (events[key] && events[key].length > 0) {
-            events[key].forEach(event => {
+        fetch('http://localhost:3001/events', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            "authorization": localStorage.getItem("token")
+          },
+        })
+          .then(response => response.json())
+          .then(data => {
+            // Handle the response from the server
+            let currentDateEvents = data.filter(event => {
+              console.log(new Date(event.datetime), date)
+              return new Date(event.datetime) == date
+            })
+            console.log(currentDateEvents)
+            if (currentDateEvents && currentDateEvents.length > 0) {
+              currentDateEvents.forEach(event => {
                 const listItem = document.createElement('li');
-                listItem.textContent = event;
+                listItem.textContent = event.name;
                 eventList.appendChild(listItem);
-            });
-        } else {
-            const listItem = document.createElement('li');
-            listItem.textContent = 'No events scheduled for this date.';
-            eventList.appendChild(listItem);
-        }
-    }
+              });
+            } else {
+              const listItem = document.createElement('li');
+              listItem.textContent = 'No events scheduled for this date.';
+              eventList.appendChild(listItem);
+            }
+            // You can redirect the user or perform other actions based on the response
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
 
-    function addNewEvent() {
+      }
+
+      function addNewEvent() {
         const newEventInput = document.getElementById('newEvent');
         const newEvent = newEventInput.value.trim();
         if (newEvent !== '') {
-            const key = `${currentYear}-${padZero(currentMonth + 1)}-${padZero(selectedDate)}`;
-            if (!events[key]) {
-                events[key] = [];
-            }
-            events[key].push(newEvent);
-
-            displayEventsForDate(selectedDate, currentMonth, currentYear);
-
-            // Clear input field
-            newEventInput.value = '';
+          const selectedCell = document.querySelector('.selected');
+          const date = selectedCell.getAttribute("data-date")
+          const eventData = {
+            name: newEvent,
+            type: "Online",
+            datetime: date,
+            college_id: "SJC"
+          }
+          fetch('http://localhost:3001/events', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              "authorization": localStorage.getItem("token")
+            },
+            body: JSON.stringify(eventData),
+          })
+            .then(response => displayEventsForDate(date))
+            .catch((error) => {
+              console.error('Error:', error);
+            });
         }
-    }
 
-    function removeEvent() {
+
+
+        // Clear input field
+        newEventInput.value = '';
+      }
+
+
+      function removeEvent() {
         const key = `${currentYear}-${padZero(currentMonth + 1)}-${padZero(selectedDate)}`;
         if (events[key]) {
-            events[key].pop();
-            displayEventsForDate(selectedDate, currentMonth, currentYear);
+          events[key].pop();
+          displayEventsForDate(selectedDate, currentMonth, currentYear);
         }
-    }
+      }
 
-    function padZero(num) {
+      function padZero(num) {
         return num < 10 ? '0' + num : num;
-    }
+      }
 
-    generateCalendar(currentMonth, currentYear);
-</script>
+      generateCalendar(currentMonth, currentYear);
+    </script>
 
-</body>
+  </body>
+
 </html>
