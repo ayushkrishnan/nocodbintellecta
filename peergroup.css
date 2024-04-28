@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+
+}
+body{
+    background-color: #eae6f5;
+}
+.col-md-4{
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+.container1{
+    padding: 0 10%;
+    background:url(../images/newcover.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    padding: 3% 10%;
+}
+.card{
+    background: #ffffffd4;
+
+}
