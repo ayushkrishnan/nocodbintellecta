@@ -15,7 +15,8 @@
   <title>Intellecta</title>
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -41,7 +42,8 @@
               Intellecta
             </span>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="s-1"> </span>
             <span class="s-2"> </span>
             <span class="s-3"> </span>
@@ -74,92 +76,141 @@
     <!-- end header section -->
   </div>
 
-    <style>
-        header{
-            background-color: #fbd5ff;
-        }
+  <style>
+    header {
+      background-color: #fbd5ff;
+    }
 
-        body {
-            background-color: #fbd5ff;
-        }
-        .container {
-            max-width: 900px;
-            margin: 100px auto;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        .container h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-control {
-            border-radius: 25px;
-            padding: 15px;
-            font-size: 16px;
-        }
-        .btn-login {
-            border-radius: 25px;
-            padding: 12px 20px;
-            font-size: 16px;
-            background-color: #007bff;
-            border: none;
-            color: #fff;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .btn-login:hover {
-            background-color: #0056b3;
-        }
-        .btn-google {
-            border-radius: 25px;
-            padding: 12px 20px;
-            font-size: 16px;
-            background-color: #dd4b39;
-            border: none;
-            color: #fff;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .btn-google:hover {
-            background-color: #c23321;
-        }
-        .text-center a {
-            color: #007bff;
-        }
-        .text-center a:hover {
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
-    
+    body {
+      background-color: #fbd5ff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 100px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      border-radius: 25px;
+      padding: 15px;
+      font-size: 16px;
+    }
+
+    .btn-login {
+      border-radius: 25px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-login:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-google {
+      border-radius: 25px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #dd4b39;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-google:hover {
+      background-color: #c23321;
+    }
+
+    .text-center a {
+      color: #007bff;
+    }
+
+    .text-center a:hover {
+      text-decoration: none;
+    }
+  </style>
+  </head>
+
+  <body>
+
     <div class="container">
-        <h2>Login</h2>
-        <form action="login.php" method="post">
-            <div class="form-group">
-                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
-            </div>
-            <button type="submit" class="btn btn-login btn-block">Login</button>
-            <button type="button" class="btn btn-google btn-block" onclick="redirectToGoogle()">Login with Google</button>
-        </form>
-        <div class="text-center mt-3">
-            <a href="#">Forgot Password?</a>
+      <h2>Login</h2>
+      <form onsubmit="return login(event)" method="post">
+        <div class="form-group">
+          <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username"
+            required>
         </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password"
+            required>
+        </div>
+        <button type="submit" class="btn btn-login btn-block">Login</button>
+        <button type="button" class="btn btn-google btn-block" onclick="redirectToGoogle()">Login with Google</button>
+      </form>
+      <div class="text-center mt-3">
+        <a href="#">Forgot Password?</a>
+      </div>
     </div>
 
     <script>
-        function redirectToGoogle() {
-            window.location.href = 'https://accounts.google.com/o/oauth2/auth?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=email%20profile&access_type=offline&approval_prompt=auto';
-            // Replace YOUR_CLIENT_ID and YOUR_REDIRECT_URI with your actual client ID and redirect URI
-        }
+      function redirectToGoogle() {
+        window.location.href = 'https://accounts.google.com/o/oauth2/auth?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=email%20profile&access_type=offline&approval_prompt=auto';
+        // Replace YOUR_CLIENT_ID and YOUR_REDIRECT_URI with your actual client ID and redirect URI
+      }
+      function login(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+        console.log("Login function called");
+
+        // Fetch username and password from the form
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Create an object with the user credentials
+        var userData = {
+          email: username,
+          password: password
+        };
+
+        // Make an HTTP POST request to the server
+        fetch('http://localhost:3001/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userData),
+        })
+          .then(response => response.json())
+          .then(data => {
+            // Handle the response from the server
+            console.log(data);
+            localStorage.setItem("token",data.token)
+            // You can redirect the user or perform other actions based on the response
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+
+        return false; // Prevent form submission
+      }
     </script>
-</body>
+  </body>
+
 </html>
